@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Halkidiki Explorer</title>
 <meta charset="UTF-8">
+<title>Halkidiki Explorer</title>
+
+<script>
+window.onload = function() {
+
+    const path = window.location.pathname;
+
+    const deepLink = "halkidikiexplorer://" + path.substring(1);
+
+    const playStore =
+    "https://play.google.com/store/apps/details?id=com.halkidikiguide.explorer";
+
+    window.location = deepLink;
+
+    setTimeout(function(){
+        window.location = playStore;
+    }, 2000);
+
+};
+</script>
+
 </head>
 
 <body>
 
-<h1>Halkidiki Explorer</h1>
+<h2>Opening Halkidiki Explorer...</h2>
 
-<p>If you have the app installed, it will open automatically.</p>
+<p>If nothing happens, install the app:</p>
 
 <a href="https://play.google.com/store/apps/details?id=com.halkidikiguide.explorer">
 Open in Google Play
